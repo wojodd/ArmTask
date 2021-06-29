@@ -4,7 +4,7 @@ $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
 $DATABASE_NAME = 'tasks';
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-// To save the comment and the recipe that liked the visitor in the database
+// عند الضغط على زر حفظ سيتم حفظ مقياس محركات الذراع في الداتابيس  
 @$a=$_POST['one'];
 @$b=$_POST['two'];
 @$c=$_POST['three'];
@@ -25,7 +25,7 @@ $DATABASE_PASS = '';
 $DATABASE_NAME = 'tasks';
 $con1 = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 
-if(@$_POST['run'])  
+if(@$_POST['run'])   // عند الضغط على زر التشغيل سيتم وضع قيمة 1 في الداتابيس بدلا من 0
 {  
  $s1="update arm set run = '1' order by id desc limit 1";  
 
